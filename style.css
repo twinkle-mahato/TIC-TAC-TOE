@@ -1,0 +1,100 @@
+*,
+*::before,*::after{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: 'popins','sans-serif';
+}
+
+.wrapper{
+width:100vw;
+height: 100vh;
+background-image: url(./assets/gradient-bg.jpg);
+display: grid;
+place-items: center;
+}
+
+.game-info{
+    color:white;
+    position:absolute;
+    top:3rem;
+    left:50%;
+    transform: translate(-50%);
+    background-color: rgba(255, 255, 255, 0.15);
+    border-radius: 1rem;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    padding: 0.5rem 3rem;
+    /* text-align:center; */
+}
+
+.tic-tac-toe{
+    width:90%;
+    /* 320px [16*20=320] */
+    max-width:20rem;
+    background-color: rgba(255, 255, 255, 0.15);
+    border-radius: 1rem;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    padding: 2rem;
+    display: grid;
+    /* repeat(3, ...) → Repeat the following pattern 3 times.
+
+1fr → Each column gets 1 fraction of the available space. */
+    grid-template-columns: repeat(3,1fr);
+    /* The element's width and height will be equal, creating a perfect square. */
+    aspect-ratio: 1/1;
+}
+
+.box{
+    position:relative;
+    width:100%;
+    aspect-ratio: 1/1;
+    cursor: pointer;
+    font-size: 3rem;
+    color:white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* box1, box2,box4,box5 er right and niche white margin  */
+.box1, .box2, .box4, .box5{
+    border-right:2px solid white;
+    border-bottom:2px solid white;
+}
+
+/* box3 and box6 er bottom er 2px white border */
+.box3, .box6{
+    border-bottom: 2px solid white;
+}
+ 
+/* box7 and box8 er bottom er 2px white border */
+.box7, .box8{
+       border-right: 2px solid white;
+}
+ 
+.btn{
+    color:white;
+    cursor: pointer;
+    position: absolute;
+    bottom:3rem;
+    left:50%;
+    transform:translateX(-50%);
+    background-color: rgba(255, 255, 255, 0.15);
+    border-radius: 1rem;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    padding: 0.5rem 2rem;
+    display: none;
+    /* opacity:0; */
+
+}
+
+/* class .active that is inside an element with class .btn and make it use display: flex or visiable the button */
+.btn.active{
+    display: flex;
+}
+
+.win{
+    background-color: rgba(0, 255, 0, 0.3);
+} 
+
+ 
